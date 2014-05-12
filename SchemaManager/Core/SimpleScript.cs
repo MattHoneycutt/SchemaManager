@@ -6,14 +6,17 @@ namespace SchemaManager.Core
 	{
 		private readonly string _script;
 
-		public SimpleScript(string script)
+		public SimpleScript(string script, SchemaManagerGlobalOptions options)
 		{
 			_script = script;
+		    Options = options;
 		}
 
 		public void Execute(IDbContext context)
 		{
 			RunAllBatchesFromText(context, _script);
 		}
+
+	    protected override sealed SchemaManagerGlobalOptions Options { get; set; }
 	}
 }

@@ -17,7 +17,7 @@ namespace SchemaManager.Infrastructure
 
 			//TransactionManager._maximumTimeout
 			var maximumTimeout = type.GetField("_maximumTimeout", BindingFlags.NonPublic | BindingFlags.Static);
-			maximumTimeout.SetValue(null, TimeSpan.FromMinutes(30));
+			maximumTimeout.SetValue(null, timeout);
 		}
 	}
 }

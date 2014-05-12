@@ -154,7 +154,7 @@ namespace SchemaManager.Tests.Core
 				{
 					base.ConfigureContainer(container);
 
-					container.Configure(cfg => cfg.For<SchemaChange>().Use(new SchemaChange(Directory.GetCurrentDirectory(), new DatabaseVersion(), new DatabaseVersion())));
+					container.Configure(cfg => cfg.For<SchemaChange>().Use(new SchemaChange(Directory.GetCurrentDirectory(), new DatabaseVersion(), new DatabaseVersion(), SchemaManagerGlobalOptions.Defaults)));
 				}
 
 				protected override void Given()
