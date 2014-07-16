@@ -6,7 +6,7 @@ param (
 
 $DatabaseScriptsFolder = Resolve-Path $DatabaseScriptsFolder
 
-$ToolsPath = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\100\Tools\ClientSetup" -name "Path").Path
+$ToolsPath = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\110\Tools\ClientSetup" -name "Path").Path
 
 $SqlCmd = $ToolsPath + "sqlcmd.exe"
 
